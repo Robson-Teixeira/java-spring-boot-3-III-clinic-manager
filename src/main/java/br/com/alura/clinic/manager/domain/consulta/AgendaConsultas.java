@@ -1,7 +1,9 @@
 package br.com.alura.clinic.manager.domain.consulta;
 
+import br.com.alura.clinic.manager.domain.medico.Medico;
 import br.com.alura.clinic.manager.domain.medico.MedicoRepository;
 import br.com.alura.clinic.manager.domain.paciente.PacienteRepository;
+import br.com.alura.clinic.manager.infra.exception.ValidacaoExcepetion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +19,24 @@ public class AgendaConsultas {
 
     public void agendar(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
 
-        var medico = medicoRepository.getReferenceById(dadosAgendamentoConsulta.idMedico());
+        if (dadosAgendamentoConsulta.idMedico() != null &&
+                !medicoRepository.existsById(dadosAgendamentoConsulta.idMedico()))
+            throw new ValidacaoExcepetion("Id do médico informado não existe!");
+
+        if (!pacienteRepository.existsById(dadosAgendamentoConsulta.idPaciente()))
+            throw new ValidacaoExcepetion("Id do paciente informado não existe!");
+
+        var medico = escolherMedico(dadosAgendamentoConsulta);
         var paciente = pacienteRepository.getReferenceById(dadosAgendamentoConsulta.idPaciente());
         var consulta = new Consulta(null, medico, paciente, dadosAgendamentoConsulta.data());
 
         consultaRepository.save(consulta);
+
+    }
+
+    private Medico escolherMedico(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
+
+        return null;
 
     }
 
