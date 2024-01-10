@@ -3,7 +3,7 @@ package br.com.alura.clinic.manager.domain.consulta;
 import br.com.alura.clinic.manager.domain.medico.Medico;
 import br.com.alura.clinic.manager.domain.medico.MedicoRepository;
 import br.com.alura.clinic.manager.domain.paciente.PacienteRepository;
-import br.com.alura.clinic.manager.infra.exception.ValidacaoExcepetion;
+import br.com.alura.clinic.manager.infra.exception.ValidacaoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,10 +21,10 @@ public class AgendaConsultas {
 
         if (dadosAgendamentoConsulta.idMedico() != null &&
                 !medicoRepository.existsById(dadosAgendamentoConsulta.idMedico()))
-            throw new ValidacaoExcepetion("Id do médico informado não existe!");
+            throw new ValidacaoException("Id do médico informado não existe!");
 
         if (!pacienteRepository.existsById(dadosAgendamentoConsulta.idPaciente()))
-            throw new ValidacaoExcepetion("Id do paciente informado não existe!");
+            throw new ValidacaoException("Id do paciente informado não existe!");
 
         var medico = escolherMedico(dadosAgendamentoConsulta);
         var paciente = pacienteRepository.getReferenceById(dadosAgendamentoConsulta.idPaciente());
@@ -40,7 +40,7 @@ public class AgendaConsultas {
             return medicoRepository.getReferenceById(dadosAgendamentoConsulta.idMedico());
 
         if (dadosAgendamentoConsulta.especialidade() == null)
-            throw new ValidacaoExcepetion("Especialidade é obrigatória quando médico não for selecionado!");
+            throw new ValidacaoException("Especialidade é obrigatória quando médico não for selecionado!");
 
         return  medicoRepository.escolherMedicoAleatorioAtivoEspecialidadeDataLivre(dadosAgendamentoConsulta.especialidade(), dadosAgendamentoConsulta.data());
 
@@ -49,7 +49,7 @@ public class AgendaConsultas {
     public void cancelar(DadosCancelamentoConsulta dadosCancelamentoConsulta) {
 
         if (!consultaRepository.existsById(dadosCancelamentoConsulta.idConsulta()))
-            throw new ValidacaoExcepetion("Id da consulta informado não existe!");
+            throw new ValidacaoException("Id da consulta informado não existe!");
 
         var consulta = consultaRepository.getReferenceById(dadosCancelamentoConsulta.idConsulta());
         consulta.cancelar(dadosCancelamentoConsulta.motivoCancelamento());
