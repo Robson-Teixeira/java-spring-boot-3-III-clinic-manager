@@ -36,7 +36,13 @@ public class AgendaConsultas {
 
     private Medico escolherMedico(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
 
-        return null;
+        if (dadosAgendamentoConsulta.idMedico() != null)
+            return medicoRepository.getReferenceById(dadosAgendamentoConsulta.idMedico());
+
+        if (dadosAgendamentoConsulta.especialidade() == null)
+            throw new ValidacaoExcepetion("Especialidade é obrigatória quando médico não for selecionado!");
+
+        return  medicoRepository.escolherMedicoAleatorioAtivoEspecialidadeDataLivre(dadosAgendamentoConsulta.especialidade(), dadosAgendamentoConsulta.data());
 
     }
 
