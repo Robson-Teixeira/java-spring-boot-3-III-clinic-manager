@@ -12,6 +12,7 @@ public record DadosAgendamentoConsulta(
         Long idPaciente,
         @NotNull
         @Future
+        // @JsonAlias(“dataConsulta”) OU @JsonAlias({“dataConsulta”, “data_consulta”})
         LocalDateTime data,
         Especialidade especialidade) {
 }
