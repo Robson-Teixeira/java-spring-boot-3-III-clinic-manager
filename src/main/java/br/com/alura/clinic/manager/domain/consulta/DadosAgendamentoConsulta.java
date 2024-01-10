@@ -13,6 +13,7 @@ public record DadosAgendamentoConsulta(
         @NotNull
         @Future
         // @JsonAlias(“dataConsulta”) OU @JsonAlias({“dataConsulta”, “data_consulta”})
+        // @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
         LocalDateTime data,
         Especialidade especialidade) {
 }
