@@ -1,13 +1,61 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2024-01-10T03:18:01.365Z",
+  "__export_date": "2024-01-10T20:50:50.905Z",
   "__export_source": "insomnia.desktop.app:v8.5.1",
   "resources": [
     {
+      "_id": "req_886e7e34aafc4665a534bf4e16f7ce33",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
+      "modified": 1704919500420,
+      "created": 1704919409862,
+      "url": "http://localhost:8080/consultas",
+      "name": "Cancelar Consulta",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"idConsulta\": 1,\n\t\"motivoCancelamento\": \"Paciente_Desistiu\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.5.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA0OTI2NTkzfQ.TeruOmu-9dIIZONwZcI69C2mUJWoKuCs-UPO82UyNdc"
+      },
+      "metaSortKey": -1704919409862,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
+      "parentId": null,
+      "modified": 1704853589895,
+      "created": 1704853589896,
+      "name": "java-spring-boot-3-III-clinic-manager - API Voll.med",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
       "_id": "req_16d76b0f1383498da917b99087f4dbe9",
       "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
-      "modified": 1704856667827,
+      "modified": 1704919399762,
       "created": 1704856074874,
       "url": "http://localhost:8080/consultas",
       "name": "Agendar Consulta",
@@ -30,7 +78,7 @@
       ],
       "authentication": {
         "type": "bearer",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA0ODYzNTE4fQ.nVRDyQYy5v9LA0dh07OjlU8fzFlqCdH3iFOzUuVfisI"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA0OTI2NTkzfQ.TeruOmu-9dIIZONwZcI69C2mUJWoKuCs-UPO82UyNdc"
       },
       "metaSortKey": -1704856074874,
       "isPrivate": false,
@@ -41,16 +89,6 @@
       "settingRebuildPath": true,
       "settingFollowRedirects": "global",
       "_type": "request"
-    },
-    {
-      "_id": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
-      "parentId": null,
-      "modified": 1704853589895,
-      "created": 1704853589896,
-      "name": "java-spring-boot-3-III-clinic-manager - API Voll.med",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
     },
     {
       "_id": "req_a34db50fdfa54c0ba95bcfe6f8f48424",
@@ -410,7 +448,7 @@
     {
       "_id": "req_6394ae1f743c45179145a228f13108d6",
       "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
-      "modified": 1704772942788,
+      "modified": 1704919470150,
       "created": 1704507152381,
       "url": "http://localhost:8080/medicos",
       "name": "Cadastro de Médico",
