@@ -1,12 +1,60 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2024-01-09T04:03:16.007Z",
+  "__export_date": "2024-01-10T03:18:01.365Z",
   "__export_source": "insomnia.desktop.app:v8.5.1",
   "resources": [
     {
-      "_id": "req_f5aa11bfe28b48d1b3e8b5e64f07a469",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_16d76b0f1383498da917b99087f4dbe9",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
+      "modified": 1704856667827,
+      "created": 1704856074874,
+      "url": "http://localhost:8080/consultas",
+      "name": "Agendar Consulta",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"idPaciente\": 1,\n\t\"idMedico\": 1,\n\t\"data\": \"2025-01-10T00:15:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.5.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA0ODYzNTE4fQ.nVRDyQYy5v9LA0dh07OjlU8fzFlqCdH3iFOzUuVfisI"
+      },
+      "metaSortKey": -1704856074874,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
+      "parentId": null,
+      "modified": 1704853589895,
+      "created": 1704853589896,
+      "name": "java-spring-boot-3-III-clinic-manager - API Voll.med",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_a34db50fdfa54c0ba95bcfe6f8f48424",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704640059850,
       "created": 1704638912323,
       "url": "http://localhost:8080/login",
@@ -40,18 +88,8 @@
       "_type": "request"
     },
     {
-      "_id": "wrk_3d6ac81cf034431f9be02e7608203e60",
-      "parentId": null,
-      "modified": 1704507152364,
-      "created": 1704507152364,
-      "name": "java-spring-boot-3-III-clinic-manager - API Voll.med",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
-    },
-    {
-      "_id": "req_d46adcf2f79943f8b8a81d751eb5d9d5",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_78ce22f7494b42b8aab53469bc71593a",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772896278,
       "created": 1704507208844,
       "url": "http://localhost:8080/medicos/5",
@@ -88,8 +126,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_87843c8acf5f4483812d77b5800438aa",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_15242a6e1d9548e1ab04416337ea237c",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772902276,
       "created": 1704508936196,
       "url": "http://localhost:8080/pacientes/1",
@@ -126,8 +164,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_df4076d01f2c43adba805b39bc420423",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_e95c9fdfbd97423e8224d0cf191747e6",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772911802,
       "created": 1704507152410,
       "url": "http://localhost:8080/medicos/1",
@@ -164,8 +202,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_96b6e78312f2406bac170aedaef6fad1",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_881c9998a043464587b2ba27e930e73c",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772917619,
       "created": 1704507152421,
       "url": "http://localhost:8080/pacientes/1",
@@ -202,8 +240,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_0a4e2d700732424ea9a5679cdac4b620",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_4dd817aad49a4ca3b49b4d51e06ca060",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772924842,
       "created": 1704507152404,
       "url": "http://localhost:8080/medicos",
@@ -248,8 +286,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_8478be8d56414f599c413d6a850582f9",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_fa4def5ead8249809df6691ed74aeca1",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772929350,
       "created": 1704507152416,
       "url": "http://localhost:8080/pacientes",
@@ -294,8 +332,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_9f1480f4db0745088f80de027f0f1732",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_a10f0ffb934b42369a9d3242e73289ad",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772933867,
       "created": 1704507152393,
       "url": "http://localhost:8080/medicos?sort=nome,desc",
@@ -332,8 +370,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_98d3618b40f04f57a96136fd52e4e196",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_4648c1b61a6141f7be4f218641a0216e",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772938505,
       "created": 1704507152398,
       "url": "http://localhost:8080/pacientes?sort=nome,desc",
@@ -370,8 +408,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_644f17ab70534974a6be6695df31a3c9",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_6394ae1f743c45179145a228f13108d6",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772942788,
       "created": 1704507152381,
       "url": "http://localhost:8080/medicos",
@@ -416,8 +454,8 @@
       "_type": "request"
     },
     {
-      "_id": "req_b7100a2509bd417cad242e529f1f882e",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "req_8ee1c5ed7f07466e83d9fa9b617dd02a",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704772946777,
       "created": 1704507152387,
       "url": "http://localhost:8080/pacientes",
@@ -462,8 +500,8 @@
       "_type": "request"
     },
     {
-      "_id": "env_f671fb0874df49dda614dc1ecbbc3842",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "env_b735c02389364d9d817c60606893a86d",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704507152367,
       "created": 1704507152367,
       "name": "Base Environment",
@@ -475,8 +513,8 @@
       "_type": "environment"
     },
     {
-      "_id": "jar_b6eccf7e96f2459eb2e1c17d21313a04",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
+      "_id": "jar_1cc473a6f29240daa5cb36b333ab3547",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
       "modified": 1704636603308,
       "created": 1704507152374,
       "name": "Default Jar",
@@ -494,16 +532,6 @@
         }
       ],
       "_type": "cookie_jar"
-    },
-    {
-      "_id": "spc_e808832d597146c4925fd752827519b5",
-      "parentId": "wrk_3d6ac81cf034431f9be02e7608203e60",
-      "modified": 1704507152432,
-      "created": 1704507152431,
-      "fileName": "java-spring-boot-3-III-clinic-manager - API Voll.med",
-      "contents": "",
-      "contentType": "yaml",
-      "_type": "api_spec"
     }
   ]
 }
