@@ -3,9 +3,13 @@ package br.com.alura.clinic.manager.domain.consulta.validacoes;
 import br.com.alura.clinic.manager.domain.consulta.DadosAgendamentoConsulta;
 import br.com.alura.clinic.manager.domain.paciente.PacienteRepository;
 import br.com.alura.clinic.manager.infra.exception.ValidacaoException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ValidadorPacienteAtivo {
+@Component
+public class ValidadorPacienteAtivo implements ValidadorAgendamentoConsultas {
 
+    @Autowired
     private PacienteRepository pacienteRepository;
 
     public void validar(DadosAgendamentoConsulta dadosAgendamentoConsulta) {

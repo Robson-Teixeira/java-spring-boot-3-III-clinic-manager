@@ -1,11 +1,14 @@
 package br.com.alura.clinic.manager.domain.consulta;
 
+import br.com.alura.clinic.manager.domain.consulta.validacoes.ValidadorAgendamentoConsultas;
 import br.com.alura.clinic.manager.domain.medico.Medico;
 import br.com.alura.clinic.manager.domain.medico.MedicoRepository;
 import br.com.alura.clinic.manager.domain.paciente.PacienteRepository;
 import br.com.alura.clinic.manager.infra.exception.ValidacaoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class AgendaConsultas {
@@ -16,6 +19,8 @@ public class AgendaConsultas {
     private PacienteRepository pacienteRepository;
     @Autowired
     private ConsultaRepository consultaRepository;
+    @Autowired
+    private List<ValidadorAgendamentoConsultas> validadorAgendamentoConsultas;
 
     public void agendar(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
 
@@ -25,6 +30,8 @@ public class AgendaConsultas {
 
         if (!pacienteRepository.existsById(dadosAgendamentoConsulta.idPaciente()))
             throw new ValidacaoException("Id do paciente informado não existe!");
+
+        validadorAgendamentoConsultas.forEach(v -> v.validar(dadosAgendamentoConsulta));
 
         var medico = escolherMedico(dadosAgendamentoConsulta);
         var paciente = pacienteRepository.getReferenceById(dadosAgendamentoConsulta.idPaciente());
