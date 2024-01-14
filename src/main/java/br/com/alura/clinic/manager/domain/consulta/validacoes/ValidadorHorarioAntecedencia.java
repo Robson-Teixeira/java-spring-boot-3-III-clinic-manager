@@ -5,7 +5,7 @@ import br.com.alura.clinic.manager.infra.exception.ValidacaoException;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Component
 public class ValidadorHorarioAntecedencia implements ValidadorAgendamentoConsultas {
@@ -13,7 +13,7 @@ public class ValidadorHorarioAntecedencia implements ValidadorAgendamentoConsult
     public void validar(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
 
         var dataConsulta = dadosAgendamentoConsulta.data();
-        var dataAgora = LocalDate.now();
+        var dataAgora = LocalDateTime.now();
         var diferencaMinutos = Duration.between(dataAgora, dataConsulta).toMinutes();
 
         if (diferencaMinutos < 30)

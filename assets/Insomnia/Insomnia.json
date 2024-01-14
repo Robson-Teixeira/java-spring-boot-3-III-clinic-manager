@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2024-01-10T20:50:50.905Z",
+  "__export_date": "2024-01-14T13:59:17.002Z",
   "__export_source": "insomnia.desktop.app:v8.5.1",
   "resources": [
     {
@@ -55,7 +55,7 @@
     {
       "_id": "req_16d76b0f1383498da917b99087f4dbe9",
       "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
-      "modified": 1704919399762,
+      "modified": 1705240592895,
       "created": 1704856074874,
       "url": "http://localhost:8080/consultas",
       "name": "Agendar Consulta",
@@ -63,7 +63,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"idPaciente\": 1,\n\t\"idMedico\": 1,\n\t\"data\": \"2025-01-10T00:15:00\"\n}"
+        "text": "{\n\t\"idPaciente\": 1,\n\t\"idMedico\": 1,\n\t\"data\": \"2024-03-25T07:00:00\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -78,9 +78,47 @@
       ],
       "authentication": {
         "type": "bearer",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA0OTI2NTkzfQ.TeruOmu-9dIIZONwZcI69C2mUJWoKuCs-UPO82UyNdc"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA1MjQ0OTc2fQ.2WFG9K20o8_AOKrf7DdATnHCHdUvQedOXGbrwS3o8b8"
       },
       "metaSortKey": -1704856074874,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7bce6b27a10f43f0b34b9a643a350f9c",
+      "parentId": "wrk_b83ca10888dc4bbaa588753db90ef9a6",
+      "modified": 1705240578559,
+      "created": 1705240578559,
+      "url": "http://localhost:8080/consultas",
+      "name": "Agendar Consulta por Especialidade",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"idPaciente\": 3,\n\t\"especialidade\": \"Ortopedia\",\n\t\"data\": \"2024-03-25T08:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.5.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVm9sbC5tZWQiLCJzdWIiOiJyb2Jzb24udGVpeGVpcmFAdm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzA1MjQ0OTc2fQ.2WFG9K20o8_AOKrf7DdATnHCHdUvQedOXGbrwS3o8b8"
+      },
+      "metaSortKey": -1704815353116,
       "isPrivate": false,
       "settingStoreCookies": true,
       "settingSendCookies": true,
