@@ -3,7 +3,7 @@ package br.com.alura.clinic.manager.controller;
 import br.com.alura.clinic.manager.domain.consulta.AgendaConsultas;
 import br.com.alura.clinic.manager.domain.consulta.DadosAgendamentoConsulta;
 import br.com.alura.clinic.manager.domain.consulta.DadosCancelamentoConsulta;
-import br.com.alura.clinic.manager.domain.consulta.DadosDetalhamentoConsulta;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("consultas")
+@SecurityRequirement(name = "bearer-key")
 public class ConsultaController {
 
     @Autowired
