@@ -30,6 +30,7 @@ public class SecurityConfigurations {
                 .sessionManagement(sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(ahr -> {
                     ahr.requestMatchers(HttpMethod.POST, "/login").permitAll(); // POST Login liberado para todos
+                    ahr.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
                     ahr.requestMatchers(HttpMethod.DELETE, "/medicos").hasRole("ADMIN");
                     ahr.requestMatchers(HttpMethod.DELETE, "/pacientes").hasRole("ADMIN");
                     ahr.anyRequest().authenticated(); // Demais requisições requerem autenticação

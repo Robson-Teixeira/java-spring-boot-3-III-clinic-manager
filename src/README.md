@@ -13,6 +13,7 @@ This project was generated with [Spring Initializr](https://start.spring.io/) ve
 - Flyway Migration
 - Spring Security
 - JWT
+- Springdoc-openapi
 
 ## Tools
 
