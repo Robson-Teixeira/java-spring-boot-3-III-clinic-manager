@@ -21,6 +21,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
                     FROM Consulta c
                     WHERE c.medico.id = m.id
                     AND c.data = :data
+                    AND c.motivoCancelamento IS NULL
                 )
             ORDER BY rand()
             LIMIT 1 """)

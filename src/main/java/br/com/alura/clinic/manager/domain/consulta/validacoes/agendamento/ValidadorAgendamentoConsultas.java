@@ -1,4 +1,4 @@
-package br.com.alura.clinic.manager.domain.consulta.validacoes;
+package br.com.alura.clinic.manager.domain.consulta.validacoes.agendamento;
 
 import br.com.alura.clinic.manager.domain.consulta.DadosAgendamentoConsulta;
 

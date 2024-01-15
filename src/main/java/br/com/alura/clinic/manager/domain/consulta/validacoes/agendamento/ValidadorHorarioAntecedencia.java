@@ -1,4 +1,4 @@
-package br.com.alura.clinic.manager.domain.consulta.validacoes;
+package br.com.alura.clinic.manager.domain.consulta.validacoes.agendamento;
 
 import br.com.alura.clinic.manager.domain.consulta.DadosAgendamentoConsulta;
 import br.com.alura.clinic.manager.infra.exception.ValidacaoException;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-@Component
+@Component("ValidadorHorarioAntecedenciaAgendamento")
 public class ValidadorHorarioAntecedencia implements ValidadorAgendamentoConsultas {
 
     public void validar(DadosAgendamentoConsulta dadosAgendamentoConsulta) {
