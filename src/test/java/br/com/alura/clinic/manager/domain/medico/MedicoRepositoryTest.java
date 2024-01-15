@@ -18,6 +18,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 // Testar uma interface repository
 @DataJpaTest
 // Utilizar o mesmo banco de dados da aplicação ao invés de um banco de dados em memória
@@ -50,7 +52,7 @@ class MedicoRepositoryTest {
         var medicoLivre = medicoRepository.escolherMedicoAleatorioAtivoEspecialidadeDataLivre(Especialidade.Cardiologia, proximaSegunda10);
 
         // then ou assert
-        Assertions.assertThat(medicoLivre).isNull();
+        assertThat(medicoLivre).isNull();
 
     }
 
@@ -69,7 +71,7 @@ class MedicoRepositoryTest {
         var medicoLivre = medicoRepository.escolherMedicoAleatorioAtivoEspecialidadeDataLivre(Especialidade.Cardiologia, proximaSegunda10);
 
         // then ou assert
-        Assertions.assertThat(medicoLivre).isEqualTo(medico);
+        assertThat(medicoLivre).isEqualTo(medico);
 
     }
 
