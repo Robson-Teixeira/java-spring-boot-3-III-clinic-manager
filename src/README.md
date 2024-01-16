@@ -21,6 +21,12 @@ This project was generated with [Spring Initializr](https://start.spring.io/) ve
 - [Insomnia](https://app.insomnia.rest/);
 - [MySQL](https://www.mysql.com/downloads/).
 
+## Build
+
+```sh
+mvn clean package
+```
+
 ## Run on Terminal
 
 ```sh 
