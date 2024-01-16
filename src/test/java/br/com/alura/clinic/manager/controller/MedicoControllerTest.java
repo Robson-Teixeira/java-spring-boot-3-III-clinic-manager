@@ -2,10 +2,7 @@ package br.com.alura.clinic.manager.controller;
 
 import br.com.alura.clinic.manager.domain.endereco.DadosEndereco;
 import br.com.alura.clinic.manager.domain.endereco.Endereco;
-import br.com.alura.clinic.manager.domain.medico.DadosCadastroMedico;
-import br.com.alura.clinic.manager.domain.medico.DadosDetalhamentoMedico;
-import br.com.alura.clinic.manager.domain.medico.Especialidade;
-import br.com.alura.clinic.manager.domain.medico.MedicoRepository;
+import br.com.alura.clinic.manager.domain.medico.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,7 +73,7 @@ class MedicoControllerTest {
         );
         var jsonEsperado = dadosDetalhamentoMedicoJacksonTester.write(dadosDetalhamentoMedico).getJson();
 
-        when(medicoRepository.save(any())).thenReturn(dadosDetalhamentoMedico);
+        when(medicoRepository.save(any())).thenReturn(new Medico(dadosCadastroMedico));
 
         // when ou act
         var response = mockMvc.perform(
@@ -97,7 +94,7 @@ class MedicoControllerTest {
         return new DadosEndereco(
                 "Rua R",
                 "Bairro B",
-                "123456000",
+                "12345600",
                 "Cidade C",
                 "UF",
                 "13",
